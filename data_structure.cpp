@@ -1,12 +1,14 @@
 #include "data_structure.h"
 
+#include <iostream>
+
 data_structure::data_structure(char& structure_type) { 
   if (structure_type == 's') { 
     m_s = new std::stack<Point>;
     m_q = NULL;
-  } else if (structure_type == 'q') { 
+  } else if (structure_type == 'q') {
     m_q = new std::queue<Point>;
-    m_q = NULL;
+    m_s = NULL;
   }
 }
 
